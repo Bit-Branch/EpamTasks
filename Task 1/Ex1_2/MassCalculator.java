@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class MassCalculator {
     private static double mass;
+    private static final int MG_IN_KG = 1000000;
+    private static final int G_IN_KG = 1000;
+    private static final int KG_IN_T = 1000;
 
     private static void enterMass() {
         Scanner scanner = new Scanner(System.in);
@@ -12,15 +15,15 @@ public class MassCalculator {
     }
 
     private static double convertToMilligrams(){
-        return mass*1000000;
+        return mass*MG_IN_KG;
     }
 
     private static double convertToGrams(){
-        return mass*1000;
+        return mass*G_IN_KG;
     }
 
     private static double convertToTons(){
-        return mass/1000;
+        return mass/KG_IN_T;
     }
 
     private static void outputAllConversions()
